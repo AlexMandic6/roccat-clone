@@ -1,0 +1,44 @@
+.info {
+
+
+    &__p-wrapper {
+        max-width: 770px;
+        margin: 12rem auto;
+
+        @include respond(laptop-lg) {
+            padding: 0 90px;
+        }
+        @include respond(tab-port) {
+            padding: 0 30px;
+        }
+    }
+
+    &__paragraph {
+        font-size: 2.4rem;
+        color: $color-white;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 7.2rem;
+        color: $color-white;
+        font-weight: 400;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+        text-align: center;
+
+        @include respond(laptop-lg) {
+            font-size: 6.2rem;
+            margin-bottom: 4rem;
+        }
+
+        @include respond(tab-land) {
+            font-size: 4.2rem;
+        }
+        @include respond(tab-port) {
+            font-size: 2.6rem;
+        }
+    }
+}

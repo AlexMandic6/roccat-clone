@@ -1,0 +1,89 @@
+.headset {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iOTE4ZGM3NzItY2VlMS00YjdkLWI3YjctN2YwY2IxZTdhY2QxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwLjI1OTA5MDkwOTA5MDkwOTEiIHN0eWxlPSJzdG9wLWNvbG9yOiMzNzM3Mzc7c3RvcC1vcGFjaXR5OjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMxYjFiMWI7c3RvcC1vcGFjaXR5OjEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoIzkxOGRjNzcyLWNlZTEtNGI3ZC1iN2I3LTdmMGNiMWU3YWNkMSkiLz48L3N2Zz4=");
+
+    @include respond(tab-port) {
+        background: $color-black;
+    }
+
+    &__showcase {
+        max-width: 50%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(tab-port) {
+            max-width: 60%;
+        }
+        @include respond(phone) {
+            max-width: 70%;
+        }
+    }
+
+    &__img {
+        max-width: 300px;
+        cursor: pointer;
+        transition: all .4s ease;
+
+        @include respond(tab-port-big) {
+            max-width: 200px;
+        }
+
+        &:hover {
+            transform: translateY(-1rem);
+        }
+    }
+
+    &__heading {
+        padding: 1rem 0;
+
+        &-link {
+            color: $color-white;
+            font-size: 3.2rem;
+            font-weight: 400;
+            text-decoration: underline .4rem rgba(255, 255, 255, 0);
+            text-underline-offset: .2rem;
+            transition: all .4s;
+
+            @include respond(tab-port-big) {
+                font-size: 2.4rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 3.2rem;
+            }
+    
+            &:hover {
+                text-decoration: underline .4rem rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+
+    &__paragraph {
+        color: rgb(145, 145, 145);
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.6;
+
+        @include respond(tab-port-big) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__btn {
+        font-size: 2rem;
+        color: rgb(21, 21, 21);
+        font-weight: 500;
+        margin-bottom: 2.5em;
+        margin-top: 1.5em;
+
+        @include respond(tab-port-big) {
+            font-size: 1.8rem;
+        }
+
+        &:hover {
+            background-color: rgba(242, 242, 242, 1);
+        }
+    }
+}

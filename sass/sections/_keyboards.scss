@@ -1,0 +1,88 @@
+.keyboards {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iOTE4ZGM3NzItY2VlMS00YjdkLWI3YjctN2YwY2IxZTdhY2QxIiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwLjI1OTA5MDkwOTA5MDkwOTEiIHN0eWxlPSJzdG9wLWNvbG9yOiMzNzM3Mzc7c3RvcC1vcGFjaXR5OjEiLz48c3RvcCBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiMxYjFiMWI7c3RvcC1vcGFjaXR5OjEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoIzkxOGRjNzcyLWNlZTEtNGI3ZC1iN2I3LTdmMGNiMWU3YWNkMSkiLz48L3N2Zz4=');
+
+    @include respond(tab-port) {
+        background: $color-black;
+    }
+
+    &__wrapper {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include respond(tab-land) {
+            max-width: 90%;
+        }
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    
+
+    &__col {
+        margin-top: 4.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: calc(50% - 15px);
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    .img-container {
+        max-width: 600px;
+
+        &__link {
+            display: inline-block;
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: translateY(-1rem);
+        }
+    }
+
+    &__text {
+        color: $color-white;
+        font-size: 3.2rem;
+        padding: 1rem 0;
+        font-weight: 400;
+
+        text-decoration: underline .4rem rgba(255, 255, 255, 0);
+        text-underline-offset: .2rem;
+        transition: all .4s;
+
+        &:hover {
+            text-decoration: underline .4rem rgba(255, 255, 255, 1);
+        }
+    }
+
+    &__paragraph {
+        color: rgb(145, 145, 145);
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.6;
+        
+    }
+
+    &__btn {
+        font-size: 2rem;
+        color: rgb(21, 21, 21);
+        font-weight: 500;
+        margin: 1.5em 0 2.5em;
+
+        &:hover {
+            background-color: rgba(242, 242, 242, 1);
+        }
+    }
+}

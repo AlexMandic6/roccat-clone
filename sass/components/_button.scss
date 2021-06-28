@@ -1,0 +1,13 @@
+.btn {
+    font-family: $roboto;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    padding: .9rem 5rem;
+    background-color: rgba(242, 242, 242, 0.85);
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+}

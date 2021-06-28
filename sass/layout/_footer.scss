@@ -1,0 +1,265 @@
+.footer {
+    
+    // TOP FOOTER
+    &__top {
+        padding: 0 2rem;
+        background-color: rgb(30, 30, 30);
+        //left side of top footer
+        &-container {
+            margin: 0 3.2rem;
+            padding: 4rem 0;
+            display: flex;
+            align-items: center;
+
+            @include respond(tab-land) {
+                padding: 3.2rem 0;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        &-img {
+            width: 25%;
+            & img {
+                display: block;
+                width: 19rem;
+                margin: 0 auto;
+            }
+
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
+
+        &-social {
+            width: 25%;
+
+            @include respond(tab-land) {
+                width: 100%;
+            }
+        }
+
+        &-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        &-item {
+            margin: 8px 15px 8px 0;
+        }
+
+        &-item:last-child {
+            margin: 8px 0;
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+
+
+        //right side of top footer
+    &-form {
+        width: 50%;
+        padding-left: 24px;
+        border-left: 2px solid rgb(112, 112, 112);
+        display: flex;
+        flex-direction: column;
+
+        @include respond(tab-land) {
+            margin-top: 2.4rem;
+            padding-left: 0;
+            border: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include respond(tab-port-big) {
+            width: 100%;
+        }
+    }
+
+    &-heading {
+        color: $color-white;
+        font-size: 1.8rem;
+        margin: 8px 0;
+    }
+
+    &-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include respond(tab-land) {
+            align-items: center;   
+        }
+    }
+
+    &-subscribe {
+        display: flex;
+
+        @include respond(tab-land) {
+            width: 85%;
+        }
+    }
+
+    &-email {
+        border: none;
+        border-bottom: 2px solid #707070;
+        width: 75%;
+        background-color: rgba(30, 30, 30, 1);
+        font-size: 1.6rem;
+        padding: 8px 12px;
+        outline: none;
+
+        &:focus {
+            background-color: #f2f2f2;
+        }
+    }
+
+    &-btn {
+        outline: none;
+        border: none;
+        background-color: transparent;
+        padding: 8px;
+        cursor: pointer;
+        color: white;
+    }
+
+    &-newsletter {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &-checkbox {
+        height: 1.6rem;
+        width: 1.6rem;
+
+    }
+
+    &-label {
+        font-size: 1.6rem;
+        padding-left: 8px;
+        color: $color-white;
+    }
+    }
+
+    // MID FOOTER
+    &__mid {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+
+        @include respond(tab-land) {
+            display: none;
+        }
+
+        &-container {
+            margin: 0 8px;
+            padding: 4rem 0 1.6rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-column {
+            margin: 0 1.6rem;
+        }
+
+        &-heading {
+            margin: 1.6rem 0;
+            font-size: 1.8rem;
+            color: $color-white;
+        }
+
+        &-list {
+            list-style: none;
+        }
+
+        &-item {
+            margin: 1.6rem 0;
+        }
+
+        &-link {
+            padding: .8rem 0;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #8d8d8d;
+            transition: color .5s ease;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+    }
+    
+    &__bottom {
+        padding: 3.2rem 0;
+
+        @include respond(tab-land) {
+            padding: 1.6rem;   
+        }
+
+        &-container {
+            max-width: 1025px;
+            margin: 0 auto;
+        }
+
+        &-list  {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include respond(tab-land) {
+                flex-direction: column;
+            }
+        }
+
+        &-link {
+            padding: .8rem 0;
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #8d8d8d;
+            transition: color .5s ease;
+
+            &:hover {
+                color: $color-white;
+            }
+        }
+
+        &-copyright {
+            margin-top: 1.6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include respond(tab-land) {
+                flex-direction: column;
+            }
+        }
+
+        &-paragraph {
+            font-size: 1.6rem;
+            color: #6b7280;
+        }
+    }
+
+}
+
+
+//change this class name later
+.twitter {
+    height: 28px;
+    width: 28px;
+    fill: rgb(141, 141, 141);
+    transition: all .2s ease;
+
+    &:hover {
+        fill: $color-white;
+    }
+}

@@ -1,0 +1,67 @@
+.pre-header {
+    background-color: $color-black;
+    font-size: 1.6rem;
+    padding: 0 3.2rem;
+    height: 44px;
+
+    display: flex;
+    justify-content: flex-end;
+
+
+    @include respond(tab-land) {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        gap: .75rem;
+        list-style: none;
+    }
+
+    &-item {
+        margin-right: 1rem;
+    }
+
+    &__link {
+        margin-left: 1rem;
+        padding: 4px 8px;
+        text-decoration: none;
+        color: rgba(225, 225, 225, .5);
+        transition: all .3s ease;
+        line-height: 2.6;
+    
+        &:hover {
+            color: rgba(225, 225, 225, 1);
+    
+        }
+    }
+
+    &__span {
+        color: $color-white;
+        line-height: 2.6;
+    }
+
+    &__country {
+        padding-left: 1rem;
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        padding-top: 1.3rem;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    &__chevron {
+        width: 18px;
+        height: 18px;
+        fill: rgba(225, 225, 225, .5);
+    }
+
+    // &__sign {
+
+    // }
+
+}

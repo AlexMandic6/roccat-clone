@@ -1,0 +1,157 @@
+.nav {
+    background-color: black;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: .8rem 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+
+    
+    @include respond(tab-land) {
+        position: fixed;
+        padding: .8rem 2.4rem;
+    }
+    @include respond(tab-port) {
+        padding: 1.6rem 2.4rem;
+    }
+
+    &__logo {
+        padding: 4px 8px;
+        min-width: 200px;
+        margin-left: 2rem;
+        flex-grow: 1;
+
+        @include respond(tab-land) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px 0;
+            //this only untill mobile navigation is made
+            margin-left: 8rem;
+        }
+        //same thing, just untill mobile nav is made
+        @include respond(phone) {
+            margin-left: 4rem;
+        }
+
+        & img {
+            height: 4rem;
+
+            @include respond(phone) {
+                height: 3.2rem;
+            }
+        }
+    }
+
+    &__list {
+        margin-left: 2rem;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+
+        @include respond(tab-land) {
+           display: none;
+        }
+    }
+
+    &__item {
+        width: 100%;
+        margin-left: 2rem;
+        padding: 1.2rem 0;
+    }
+
+
+    &__link {
+        position: relative;
+        padding: 0 1.2rem;
+        line-height: 1.6;
+        text-decoration: none;
+        white-space: nowrap;
+        color: white;
+        font-size: 1.8rem;
+        transition: all .3s ease-out;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            left: 0;
+            bottom: -15px;
+            background: #ffffff;
+            transform: scale(0, 1);
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scale(1, 1);
+        }
+    }
+
+
+    &__icons {
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+        margin-left:2rem;
+        flex-grow: 1;
+
+        @include respond(tab-land) {
+            flex-grow: 0;
+            margin-left: 0;
+        }
+    }
+
+    &__icon {
+        height: 32px;
+        width: 32px;
+        margin: 0 1rem;
+        padding: 8px 0;
+        fill: white;
+        cursor: pointer;
+
+        &-user {
+            @include respond(tab-land) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.fixed {
+    position: fixed;
+}
+
+// BANNER
+.header-banner {
+    background-color: #2a2a2a;
+    min-height: 44px;
+    text-align: center;
+    width: 100%;
+
+    @include respond(tab-land) {
+        position: absolute;
+        top: 64px;
+    }
+    @include respond(tab-port) {
+        top: 80px;
+    }
+
+    @include respond(phone) {
+        top: 72px;
+    }
+
+    &__text{
+        color: #66ffad;
+        line-height: 44px;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+}
