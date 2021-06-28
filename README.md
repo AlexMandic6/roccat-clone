@@ -5,4 +5,4 @@
 - Made using HTML, SASS, GULP, JS.
 
 Header and main video.
-![my image](/img/scrnshots/scrnshot1.png?raw=true "Header area screenshot")
+![my image](/img/scrnshots/screenshot1.png?raw=true "Header area screenshot")
